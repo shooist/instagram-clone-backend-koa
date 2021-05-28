@@ -1,14 +1,14 @@
-// const functions = require("firebase-functions");
-// const Koa = require("koa");
-// const Router = require("koa-router");
-// const json = require("koa-json");
-// const bodyParser = require("koa-bodyparser");
-// const { ApolloServer, gql } = require("apollo-server-koa");
+import * as functions from "firebase-functions";
 import { PrismaClient } from "@prisma/client";
+import Koa from "koa";
+// import bodyParser from "koa-bodyparser";
+import { ApolloServer, gql } from "apollo-server-koa";
+// import Router from "koa-router";
+// import json from "koa-json";
 
 const app = new Koa();
 const region = "asia-northeast1";
-app.use(bodyParser());
+// app.use(bodyParser());
 
 const prisma = new PrismaClient();
 
